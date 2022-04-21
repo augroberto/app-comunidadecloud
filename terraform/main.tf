@@ -5,13 +5,16 @@ terraform{
       version = "=3.0.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name  = "rgtfstates"
+    storage_account_name = "tfscomunidadecloud"
+    container_name       = "tfstatecomunidadecloud"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
   features {}    
-
-  subscription_id = "d7db7887-0e34-451e-98c6-a22c3c394233"
-  tenant_id = "f5237a32-dd33-498a-9dff-dfb70f5e8ac7"
 }
 
 resource "azurerm_resource_group" "iaccomunidadecloud" {
