@@ -41,8 +41,8 @@ resource "azurerm_linux_web_app" "iaccomunidadecloudapp" {
     ftps_state = "AllAllowed"
     container_registry_use_managed_identity = false
     application_stack {
-      docker_image = "acrcomunidadecloud.azurecr.io/mycontianer"
-      docker_image_tag = "v0"
+      docker_image = "acrcomunidadecloud.azurecr.io/mycontainer"
+      docker_image_tag = "2"
     }
   }
 }
